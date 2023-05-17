@@ -1,0 +1,20 @@
+{
+  "Students": [
+    {
+      "name": "Nada Ayman",
+      "email": "nada@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "Omnia Ayman",
+      "email": "omnia@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "Reem Ayman",
+      "email": "reem@gmail.com",
+      "id": 3
+    }
+
+  ]
+}

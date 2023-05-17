@@ -1,0 +1,40 @@
+
+<div class="container mt-5 w-50 mx-auto">
+  <form [formGroup]="Validation" class="border p-3 rounded-3" *ngIf="student ; else falseBlock" >
+
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input #Name formControlName="name" type="text" class="form-control" id="name" placeholder="Enter Name" >
+    </div>
+    <div class="alert alert-danger text-center" *ngIf="!NameValid && Name.value">
+      Name Not Valid!
+    </div>
+
+    <div class="alert alert-success text-center" *ngIf="NameValid">
+      Name Valid
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email </label>
+      <input #Email formControlName="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter Email" >
+    </div>
+
+    <div class="alert alert-danger text-center" *ngIf="!EmailValid && Email.value">
+      Email Not Valid!
+    </div>
+
+    <div class="alert alert-success text-center" *ngIf="EmailValid">
+      Email Valid
+    </div>
+
+
+   <div class="text-center my-4">
+    <button type="submit" class="btn btn-outline-dark w-25" (click)="Update()" >Update</button>
+   </div>
+  </form>
+
+  <ng-template #falseBlock>
+    <div class="spinner-border text-primary" role="status">
+     <h1 class="alert alert-primary text-center">Loading.......</h1>
+    </div>
+  </ng-template>
+</div>

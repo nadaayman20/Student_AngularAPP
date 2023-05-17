@@ -1,0 +1,25 @@
+<div class="container-fluid mt-5">
+  <table class="table table-striped text-center">
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Email</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let std of Students">
+        <td>{{std.id}}</td>
+        <td>{{std.name}}</td>
+        <td>{{std.email}}</td>
+        <td><a routerLink="/Students/{{std.id}}" class="btn btn-primary">Details</a></td>
+        <td><a routerLink="/UpdateStudent/{{std.id}}" class="btn btn-warning">Edit</a></td>
+        <td><button (click)="DeleteStudent(std.id)" class="btn btn-danger">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
